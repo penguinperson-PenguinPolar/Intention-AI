@@ -72,8 +72,6 @@ def train():
         if check(rect1_data, bias, weights) == False:rect1 = True
         if check(rect2_data, bias, weights) == False:rect2 = True
         if circle1 and circle2 and rect1 and rect2:
-            print(f"BIAS: {bias}")
-            print(f"Weights: {weights}")
             return bias,weights
         else:
             if circle1 == False:
@@ -90,3 +88,6 @@ def train():
                     weights[i] += rect2_data[i]
 
 bias,weights = train()
+print("Training Ended")
+print(f"BIAS: {bias}")
+print(f"Weights: {weights}")
